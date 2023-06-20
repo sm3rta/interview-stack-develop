@@ -32,6 +32,8 @@ services:
       - ./webapp:/webapp
     environment:
       - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_ORDERS_API_BASE_URL=http://localhost:5001/api/orders
+      - REACT_APP_PRODUCTS_API_BASE_URL=http://localhost:5002/api/products
     networks:
       - app_network
 

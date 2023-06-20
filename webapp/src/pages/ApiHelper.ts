@@ -1,7 +1,10 @@
 import axios from "axios";
 import { Order, OrderData, Product } from "../components/interfaces";
 
-const INPIPELINE_URL = "http://localhost:5001/api/orders/inpipeline";
+const ORDERS_API_BASE_URL = "http://localhost:5001/api/orders";
+const PRODUCTS_API_BASE_URL = "http://localhost:5002/api/products";
+
+const INPIPELINE_URL = `${ORDERS_API_BASE_URL}/inpipeline`;
 
 const getInPipelineData = async () => {
   const orderData: OrderData = {
@@ -28,7 +31,7 @@ const getInPipelineData = async () => {
   return { orderData, errorOccurred };
 };
 
-const UPDATE_STATUS_URL = "http://localhost:5001/api/orders/update_status";
+const UPDATE_STATUS_URL = `${ORDERS_API_BASE_URL}/update_status`;
 
 const updateOrderStatus = async (order: Order, newOrderStatus: string) => {
   const updatedOrder = { ...order, OrderStatus: newOrderStatus };
@@ -46,7 +49,7 @@ const updateOrderStatus = async (order: Order, newOrderStatus: string) => {
   return orderStatusUpdated;
 };
 
-const GET_ACTIVE_PRODUCTS_URL = "http://localhost:5002/api/products/all";
+const GET_ACTIVE_PRODUCTS_URL = `${PRODUCTS_API_BASE_URL}/all`;
 
 const getActiveProducts = async () => {
   let activeProducts: Product[] = [];

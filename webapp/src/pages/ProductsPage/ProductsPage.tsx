@@ -7,16 +7,8 @@ import PageWrapper from "../PageWrapper";
 import ProductCard from "./ProductCard";
 
 const ProductsPage = () => {
-  /*
-    TODO:
-      When the drag ends we want to keep the status persistant across logins. 
-      Instead of modifying the data locally we want to do it serverside via a post
-      request
-  */
-
   const [loadingState, setLoadingState] = useState(DATA_STATES.waiting);
   const [data, setData] = useState([] as Product[]);
-  console.log(`🚀 ~ ProductsPage ~ data:`, data);
 
   const getProducts = async () => {
     setLoadingState(DATA_STATES.waiting);
@@ -53,7 +45,7 @@ const ProductsPage = () => {
         className="flex flex-row justify-center w-full pt-4 text-3xl font-bold text-white"
         data-testid="error-container"
       >
-        An error occured fetching the data!
+        An error occurred fetching the data!
       </div>
     );
 

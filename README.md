@@ -4,8 +4,8 @@
 
 The application is comprised of 4 parts
 
-1. webapp -> Frontend for the applicaiton (written in React and Typescript)
-2. api.orders -> Backend for the applicaiton (written in flask)
+1. webapp -> Frontend for the application (written in React and Typescript)
+2. api.orders -> Backend for the application (written in flask)
 3. nginx -> The proxy for the requests
 4. db -> mariadb
 
@@ -19,7 +19,7 @@ The application is comprised of 4 parts
 
 ### webapp
 
-The client side applicaiton uses node version 17, node 16 should also work as well. From the root of the `webapp` directory install the node dependencies using the command bellow
+The client side application uses node version 17, node 16 should also work as well. From the root of the `webapp` directory install the node dependencies using the command bellow
 
 ```Bash
 npm ci
@@ -60,7 +60,7 @@ To start storybook run the following command from the root of the `webapp` direc
 npm run storybook
 ```
 
-To view the component library, go to [http://localhost:6006](http://localhost:6006). This will show you all the pages and components that have been built for the application without needing to start the applicaiton.
+To view the component library, go to [http://localhost:6006](http://localhost:6006). This will show you all the pages and components that have been built for the application without needing to start the application.
 
 NOTE: Storybook is configured to run locally
 
@@ -140,7 +140,7 @@ Database marz -> Table Orders(
 )
 ```
 
-Currently the `marz.Product.ProductPhotoURL` column contains no valid urls to for photos 
+Currently the `marz.Product.ProductPhotoURL` column contains no valid urls to for photos
 
 ```
 MariaDB [marz]> select * from Product;
