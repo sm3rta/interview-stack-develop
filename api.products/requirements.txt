@@ -16,4 +16,3 @@ pytest==7.2.1
 tomli==2.0.1
 Werkzeug==2.2.3
 zipp==3.13.0
-flask-cors==3.0.10
